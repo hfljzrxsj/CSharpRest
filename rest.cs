@@ -6,11 +6,6 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
-// using System.IO;
-// using System.Collections.Generic;
-// using System.ComponentModel;
-// using System.Data;
-// using System.Text;
 using System.Reflection;
 class Program {
   [DllImport("user32.dll", EntryPoint = "FindWindow", CharSet = CharSet.Auto)]
@@ -30,18 +25,11 @@ class Program {
   const int fivemin = 300 * 1000;
   const int onemin = 60 * 1000;
   const string restTitle = "rest now!";
-  // static void writeHta()  
-  //   {  
-  //       string path = @"./rest.hta"; // 更改为你想要的路径  
-  //       string content = @"<HTA:Application WindowState='maximize' selection='no' Caption='no' scroll='no' SysMenu='no' ShowInTaskBar='no' contextmenu='no'><html><body style='background:black;cursor:url(./black.cur)'></body></html>"; // 你想要写入的内容  
-  //       // 将内容写入文件，如果文件不存在，会自动创建  
-  //       File.WriteAllText(path, content);  
-  //   }  
-  static void randomRest(){
-    Random random = new Random();  
+  static void randomRest() {
+    Random random = new Random();
     double randomNumber = random.NextDouble(); // 生成一个0到1之间的随机数  
-    int result = (int)(randomNumber * (4-maxTime)*1.25); // 乘以10后向下取整
-    RunREST(5+result);
+    int result = (int)(randomNumber * (4 - maxTime) * 1.25); // 乘以10后向下取整
+    RunREST(5 + result);
   }
   static void init() {
     maxTime = 4;
