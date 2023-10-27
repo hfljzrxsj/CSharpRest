@@ -24,7 +24,7 @@
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "cmd",
-      "runtimeArgs": [ "/c", "csc /t:winexe ${file} && ${fileBasenameNoExtension}.exe && shift_f5.exe" ],
+      "runtimeArgs": [ "/c", "csc /r:./WPF/System.Speech.dll /t:winexe ${file} && ${fileBasenameNoExtension}.exe && shift_f5.exe" ],
       "console": "integratedTerminal"
     },
     {
@@ -32,7 +32,7 @@
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "cmd",
-      "runtimeArgs": [ "/c", "csc ${file} && ${fileBasenameNoExtension}.exe" ],
+      "runtimeArgs": [ "/c", "csc /r:./WPF/System.Speech.dll ${file} && ${fileBasenameNoExtension}.exe" ],
       "console": "integratedTerminal"
     }
   ]

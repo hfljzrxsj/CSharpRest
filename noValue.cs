@@ -58,3 +58,28 @@
   //       // 将内容写入文件，如果文件不存在，会自动创建  
   //       File.WriteAllText(path, content);  
   //   }  
+
+        // Process.Start("powershell.exe", "-file \"" + scriptPath + "\" " +((5 + result)*60).ToString());
+      // ProcessStartInfo psi = new ProcessStartInfo("powershell.exe");
+      // psi.Arguments = string.Format(@"-Command ""& {{$currentBrightness = (Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightness).CurrentBrightness; $monitor = Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMethods; $monitor.WmiSetBrightness(1, 0); Start-Sleep -Seconds {0}; $monitor.WmiSetBrightness(1, $currentBrightness)}}""",result);
+      // Process.Start(psi);
+          // StartProcess("powershell.exe -file light.ps1 "+((5 + result)*60).ToString());
+              // string currentDirectory = Directory.GetCurrentDirectory();
+    // string scriptPath = Path.Combine(currentDirectory, "light.ps1");
+
+      // static void StartKiller(int time) {
+  //   System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+  //   timer.Interval = time; //3秒启动 
+  //   timer.Tick += new EventHandler(Timer_Tick);
+  //   timer.Start();
+  // }
+  // static void Timer_Tick(object sender, EventArgs e) {
+  //   IntPtr ptr = FindWindow(null, restTitle);
+  //   if(ptr != IntPtr.Zero) {//找到则关闭MessageBox窗口 
+  //     PostMessage(ptr, WM_CLOSE, IntPtr.Zero, IntPtr.Zero);
+  //   }
+  //   ((System.Windows.Forms.Timer) sender).Stop();//停止Timer 
+  // }
+// StartKiller(fivemin);
+// StartKiller(1);
+    // writeHta();
